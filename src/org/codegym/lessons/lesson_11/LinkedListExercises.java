@@ -11,9 +11,9 @@ import java.util.LinkedList;
 public class LinkedListExercises {
     public static void main(String[] args) {
         LinkedList<Integer> numbers = new LinkedList<Integer>();
-        numbers.add(1);
-        numbers.add(2);
-        numbers.add(3);
+//        numbers.add(1);
+//        numbers.add(2);
+//        numbers.add(3);
 //
 //        for (Integer n : numbers) {
 //            System.out.println(n);
@@ -29,9 +29,14 @@ public class LinkedListExercises {
 
 
         //作为队列
-//        System.out.println("入队，排到队尾: " );
-//        numbers.offer(8);
-//        System.out.println("出队，先进先出：" + numbers.poll());
+        System.out.println("入队，排到队尾: " );
+        numbers.offer(5);
+        numbers.offer(7);
+        numbers.offer(8);
+
+        System.out.println("出队，先进先出：" + numbers.poll());
+        System.out.println("出队，先进先出：" + numbers.poll());
+        System.out.println("出队，先进先出：" + numbers.poll());
 //        for (Integer n : numbers) {
 //            System.out.println(n);
 //        }

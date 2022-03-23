@@ -22,25 +22,24 @@ public class HashMapTest {
 //        System.out.println(map.entrySet());
 
         //遍历Key
-        for (String key : map.keySet()){
-            System.out.println("Key = " + key);
-        }
-
-        //遍历Value
-        for (String value: map.values()){
-            System.out.println("Value = " + value);
-        }
-
-
-        //整体遍历
-//        for (Map.Entry<String, String> entry : map.entrySet()) {
-//            System.out.println("Key: " + entry.getKey() + ", Value: " + entry.getValue());
+//        for (String key : map.keySet()){
+//            System.out.println("Key = " + key);
+//        }
+//
+//        //遍历Value
+//        for (String value: map.values()){
+//            System.out.println("Value = " + value);
 //        }
 
+        //整体遍历
+        for (Map.Entry<String, String> entry : map.entrySet()) {
+            System.out.println("Key: " + entry.getKey() + ", Value: " + entry.getValue());
+        }
+
         //Lambda表达式
-//        map.forEach((k,v)->{
-//            System.out.println("Key: " + k + ", Value: " + v);
-//        });
+        map.forEach((k,v)->{
+            System.out.println("Key: " + k + ", Value: " + v);
+        });
 
     }
 }
