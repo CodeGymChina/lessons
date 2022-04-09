@@ -12,10 +12,12 @@ public class ThreadDemo01 extends Thread{
     /**
      * synchronized 修饰实例方法
      */
-    public synchronized void increase() throws InterruptedException {
+    public void increase() throws InterruptedException {
+        System.out.println(Thread.currentThread().getName() + "开始执行");
         sleep(1000);
         count++;
         System.out.println(Thread.currentThread().getName() + ": " + count);
+        System.out.println(Thread.currentThread().getName() + "结束执行");
     }
     @Override
     public void run() {
@@ -34,6 +36,10 @@ public class ThreadDemo01 extends Thread{
         Thread t5 = new Thread(test);
         Thread t6 = new Thread(test);
         Thread t7 = new Thread(test);
+//        t1.setName("1");
+//        t2.setName("2");
+//        t3.setName("3");
+//        t4.setName("4");
         t1. start();
         t2. start();
         t3. start();

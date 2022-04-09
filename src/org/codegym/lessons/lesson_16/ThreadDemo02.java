@@ -12,7 +12,7 @@ public class ThreadDemo02 extends Thread{
     /**
      * synchronized 修饰实例方法
      */
-    public synchronized void increase() throws InterruptedException {
+    public static synchronized void increase() throws InterruptedException {
         sleep(1000);
         count++;
         System.out.println(Thread.currentThread().getName() + ": " + count);
@@ -32,7 +32,7 @@ public class ThreadDemo02 extends Thread{
         Thread t2 = new Thread(test02);
         t1.setName("threadOne");
         t2.setName("threadTwo");
-        t1. start();
-        t2. start();
+        t1.start();
+        t2.start();
     }
 }
