@@ -10,7 +10,6 @@ package org.codegym.lessons.lesson_11;
 public class Person implements Comparable<Person>{
     private String name;
     private int age;
-    private int stuNo;
 
     public Person() { }
 
@@ -54,6 +53,14 @@ public class Person implements Comparable<Person>{
 
         }
         return flag;
+    }
+
+    @Override
+    public String toString() {
+        if (this.getName() != null)
+            return this.getName();
+        else
+            return super.toString();
     }
 }
 
