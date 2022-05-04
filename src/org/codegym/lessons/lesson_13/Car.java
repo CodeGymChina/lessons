@@ -1,10 +1,13 @@
 package org.codegym.lessons.lesson_13;
 
+import org.codegym.lessons.lesson_23.SimpleAnnotation;
+
 /**
  * @desc: Car 交通工具Car实现类
  * @author: zhailihu
  * @date: 27/03/2022 14:17
  */
+@SimpleAnnotation(classDesc = "汽车类型")
 public class Car extends Vehicle implements IEngine {
     private int wheels;
     private String model;

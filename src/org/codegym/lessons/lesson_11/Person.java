@@ -1,5 +1,8 @@
 package org.codegym.lessons.lesson_11;
 
+import org.codegym.lessons.lesson_23.Applog;
+import org.codegym.lessons.lesson_23.OperationType;
+
 /**
  * @author: zhailihu
  *
@@ -18,18 +21,26 @@ public class Person implements Comparable<Person>{
         this.age = age;
     }
 
+    @Applog(desc = "获取姓名", operateType = OperationType.QUERY)
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
-
     public int getAge() {
         return age;
     }
     public void setAge(int age) {
         this.age = age;
+    }
+
+    @Applog(desc = "年龄计算", operateType = OperationType.UPDATE)
+    public int ageCalculation() {
+        //故意抛处一个运行时异常
+        int i = 1/0;
+        return (this.age + 100);
     }
 
     /**
