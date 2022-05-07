@@ -9,7 +9,7 @@ package org.codegym.lessons.lesson_15;
  *
  *   1.继承 Thread
  *    new myThread().start();
- *   2.实现 Runnable 接口，重写run方法
+ *   2.实现 RunnableDemo 接口，重写run方法
  *    new Thread(new MyThread()).start();
  *   3.使用 Lambda 表达式
  *    new Thread(() -> {
